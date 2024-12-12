@@ -86,7 +86,7 @@ class MovieSessionViewSet(viewsets.ModelViewSet):
 
 
 class OrderViewSet(viewsets.ModelViewSet):
-    queryset = Order.objects.prefetch_related("teckets").select_related(
+    queryset = Order.objects.prefetch_related("tickets").select_related(
         "movie_session"
     )
     pagination_class = OrderSetPagination
